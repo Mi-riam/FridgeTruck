@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand text-primary">FridgeTrack</a>
+    <div class="d-flex align-items-center">
+        <% if Current.user %>
+        <span class="text-black me-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+        </svg>
+            <%= Current.user.name%>
+            </span>
+        <% end %>
+        <%= button_to "Logout", "login", class: "btn btn-outline-secondary", method: :delete %>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+<div class="d-flex">
+    <%= render partial: "fridge/fridge" %>
+    <%= render partial: "fridge/wishlist" %>
+</div>
+
+    <%= render partial: "fridge/shopping_list" %>
+<div>

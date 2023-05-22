@@ -1,0 +1,12 @@
+
+<% if flash[:notice] %>
+    <div class="container alert alert-info m-5 fixed-top mx-auto" role="alert">
+        <%= flash[:notice] %>
+    </div>
+<% end %>
+
+<% if flash[:alert] %>
+    <div class="container alert alert-warning m-5 fixed-top mx-auto" role="alert">
+    <%= flash[:alert] %>
+    </div>
+<% end %>

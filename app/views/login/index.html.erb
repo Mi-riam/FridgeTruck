@@ -1,0 +1,25 @@
+<div class="d-flex flex-column justify-content-center align-items-center vh-100 text-center bg-primary bg-gradient">
+    <div class="container card px-5 py-3" style="max-width: 640px;">
+    <h1>Sign in</h1>
+
+    <%= form_with url: "login" do |form| %>
+    <div class="mb-3 text-start">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control", placeholder: "Enter your username" %>
+    </div>
+
+    <div class="mb-3 text-start">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: "form-control", placeholder: "Enter your password" %>
+    </div>
+
+    <div class="">
+        <%= form.submit "Sign In", class: "btn btn-primary" %>
+    </div>
+    <% end %>
+
+      <a href="/login" class="link my-3">
+        Don't have account? Just create a new one
+      </a>
+    </div>
+</div>
